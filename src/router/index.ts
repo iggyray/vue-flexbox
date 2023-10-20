@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ClusterComponent from '../components/ClusterComponent.vue'
+import StackComponent from '../components/StackComponent.vue'
+import BlockComponent from '../components/BlockComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +9,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: BlockComponent
+    },
+    {
+      path: '/cluster',
+      name: 'cluster',
+      component: ClusterComponent
+    },
+    {
+      path: '/stack',
+      name: 'stack',
+      component: StackComponent
     }
   ]
 })
